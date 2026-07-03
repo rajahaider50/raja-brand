@@ -36,6 +36,7 @@ function response($status, $message, $data = null) {
     if ($data !== null) {
         $response['data'] = $data;
     }
+    header('Content-Type: application/json');
     echo json_encode($response);
     exit;
 }
